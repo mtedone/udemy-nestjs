@@ -1156,13 +1156,23 @@
         "signature": "ceadf8ae9b705cdfa854ab0efc44d22509e8e2a0d9ff35206bde3a954e469f07",
         "affectsGlobalScope": false
       },
+      "../src/tasks/task.model.ts": {
+        "version": "572650f261fdf3f3dc97bd6196e28c82f7da16ee3301e3482c397ea6318ef3ee",
+        "signature": "1f1972745fd56e4323782ccdc86730f1ae6b07fc29012c7c2a2872104f6d6fca",
+        "affectsGlobalScope": false
+      },
+      "../src/tasks/tasks.service.ts": {
+        "version": "6d6ea5119f86814d6ffe16561ff0de1fe19ffba754a01084f938e41a65f3fd43",
+        "signature": "a0d2ac7b0b8df11b5c7ca216367dcb8de2a3f32587234d317453758a0de163dd",
+        "affectsGlobalScope": false
+      },
       "../src/tasks/tasks.controller.ts": {
-        "version": "87062543042e8df4333cbd497ecbaeb4e3e7e654f98b24002c39309324a8c6fb",
-        "signature": "4c1aa14b8472059cf57a28f1283f03dabd06f5e52017e2c68fbcfb9202f238c2",
+        "version": "4e32918b73c383387fb0ba5535f9218fb3460ab4711e67f9edef124aadfe36e7",
+        "signature": "29ed76d4ea8483ac7c81bded6562563c62a2f056f985df7c2e2e3c168691d160",
         "affectsGlobalScope": false
       },
       "../src/tasks/tasks.module.ts": {
-        "version": "51a6bd00093254dfc0e64443e3ae3f6f926d577bc862576fd7fc39910aaff0c2",
+        "version": "dbfe5fde21324283d62c025e5b22543ac050508a97106dca557a2bc9d4c92ba5",
         "signature": "957753c3d8b7f5d76f3b7dcceab5c1f0b308580c6b4e2819f77518edb37b6c5f",
         "affectsGlobalScope": false
       },
@@ -3156,11 +3166,18 @@
         "../src/app.module.ts"
       ],
       "../src/tasks/tasks.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/tasks/task.model.ts",
+        "../src/tasks/tasks.service.ts"
       ],
       "../src/tasks/tasks.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
-        "../src/tasks/tasks.controller.ts"
+        "../src/tasks/tasks.controller.ts",
+        "../src/tasks/tasks.service.ts"
+      ],
+      "../src/tasks/tasks.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/tasks/task.model.ts"
       ]
     },
     "exportedModulesMap": {
@@ -4408,6 +4425,13 @@
       ],
       "../node_modules/rxjs/internal/util/pipe.d.ts": [
         "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../src/tasks/tasks.controller.ts": [
+        "../src/tasks/task.model.ts",
+        "../src/tasks/tasks.service.ts"
+      ],
+      "../src/tasks/tasks.service.ts": [
+        "../src/tasks/task.model.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -4786,8 +4810,10 @@
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
       "../src/app.module.ts",
       "../src/main.ts",
+      "../src/tasks/task.model.ts",
       "../src/tasks/tasks.controller.ts",
-      "../src/tasks/tasks.module.ts"
+      "../src/tasks/tasks.module.ts",
+      "../src/tasks/tasks.service.ts"
     ]
   },
   "version": "3.9.7"
