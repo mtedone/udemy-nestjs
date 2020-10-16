@@ -17,7 +17,8 @@ let TasksService = class TasksService {
     getAllTasks() {
         return this.tasks;
     }
-    createTask(title, description) {
+    createTask(createTaskDto) {
+        const { title, description } = createTaskDto;
         const task = {
             id: uuid_1.v4(),
             title,
@@ -26,6 +27,23 @@ let TasksService = class TasksService {
         };
         this.tasks.push(task);
         return task;
+    }
+    getTaskById(id) {
+        return this.tasks.find((task) => task.id === id);
+    }
+    deleteTask(id) {
+        this.tasks = this.tasks.filter((task) => task.id !== id);
+    }
+    updateTaskStatus(id, status) {
+        console.log(`id: ${id}, status: ${status}`);
+        const index = this.tasks.findIndex((task) => task.id === id);
+        if (index >= 0) {
+            this.tasks[index].status = status;
+        }
+        else {
+            console.error(`Task with id: ${id} not found`);
+        }
+        return this.tasks[index];
     }
 };
 TasksService = __decorate([
