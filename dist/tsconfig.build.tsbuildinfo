@@ -1166,14 +1166,19 @@
         "signature": "b1d26f03607e121c7317f85d8725d2562ea98694c85f768a3db85be2488756e3",
         "affectsGlobalScope": false
       },
+      "../src/tasks/dto/get-tasks-filter.dto.ts": {
+        "version": "73a844b01109428e6729d4d04232d83e442114dbef8deed3be730b5bf9403b21",
+        "signature": "97779b4eedb47290770c3cc5e05a600d5ccf5ed8ebe7f05324093ce67cced30f",
+        "affectsGlobalScope": false
+      },
       "../src/tasks/tasks.service.ts": {
-        "version": "75fa7514a6b8110b533c63a834ba3d7ee659397cd543b9c457552966ad6ba5be",
-        "signature": "d5e15e5f0b0930f49bd87fcd647327ae37c6c69a28bc39e4126ae1ba04db30ac",
+        "version": "bd8e216582f6d2f621c42102ce6faa1e14217ac62d1af2121b9b6ab379da0e9c",
+        "signature": "41a89e747aebfbacf77239a4d8a0a0e3d414823c6d38d94042feed2cbc48bbce",
         "affectsGlobalScope": false
       },
       "../src/tasks/tasks.controller.ts": {
-        "version": "963ec19aa2f8a9f78a96a6a8e7990d813d444533b69f9aad641d0baf844f27d8",
-        "signature": "a2fb63120635856579ce92283a38ddaa383c210266caff760e754ea9269ee732",
+        "version": "36402b6e01a8f41bebf16fbd2359b8f0316fc46b6c60265674ac6fcd41280800",
+        "signature": "360e62bc16509092c565846f240237a2678b3c05571d7f3c392ea7ea1aff6566",
         "affectsGlobalScope": false
       },
       "../src/tasks/tasks.module.ts": {
@@ -3170,9 +3175,13 @@
         "../node_modules/@nestjs/core/index.d.ts",
         "../src/app.module.ts"
       ],
+      "../src/tasks/dto/get-tasks-filter.dto.ts": [
+        "../src/tasks/task.model.ts"
+      ],
       "../src/tasks/tasks.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/tasks/dto/create-task.dto.ts",
+        "../src/tasks/dto/get-tasks-filter.dto.ts",
         "../src/tasks/task.model.ts",
         "../src/tasks/tasks.service.ts"
       ],
@@ -3184,6 +3193,7 @@
       "../src/tasks/tasks.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/tasks/dto/create-task.dto.ts",
+        "../src/tasks/dto/get-tasks-filter.dto.ts",
         "../src/tasks/task.model.ts"
       ]
     },
@@ -4433,13 +4443,18 @@
       "../node_modules/rxjs/internal/util/pipe.d.ts": [
         "../node_modules/rxjs/internal/types.d.ts"
       ],
+      "../src/tasks/dto/get-tasks-filter.dto.ts": [
+        "../src/tasks/task.model.ts"
+      ],
       "../src/tasks/tasks.controller.ts": [
         "../src/tasks/dto/create-task.dto.ts",
+        "../src/tasks/dto/get-tasks-filter.dto.ts",
         "../src/tasks/task.model.ts",
         "../src/tasks/tasks.service.ts"
       ],
       "../src/tasks/tasks.service.ts": [
         "../src/tasks/dto/create-task.dto.ts",
+        "../src/tasks/dto/get-tasks-filter.dto.ts",
         "../src/tasks/task.model.ts"
       ]
     },
@@ -4820,6 +4835,7 @@
       "../src/app.module.ts",
       "../src/main.ts",
       "../src/tasks/dto/create-task.dto.ts",
+      "../src/tasks/dto/get-tasks-filter.dto.ts",
       "../src/tasks/task.model.ts",
       "../src/tasks/tasks.controller.ts",
       "../src/tasks/tasks.module.ts",

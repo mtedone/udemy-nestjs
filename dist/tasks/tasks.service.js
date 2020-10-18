@@ -35,15 +35,20 @@ let TasksService = class TasksService {
         this.tasks = this.tasks.filter((task) => task.id !== id);
     }
     updateTaskStatus(id, status) {
-        console.log(`id: ${id}, status: ${status}`);
-        const index = this.tasks.findIndex((task) => task.id === id);
-        if (index >= 0) {
-            this.tasks[index].status = status;
+        const task = this.getTaskById(id);
+        task.status = status;
+        return task;
+    }
+    getTasksWithFilters(filterDto) {
+        const { status, search } = filterDto;
+        let tasks = this.getAllTasks();
+        if (status) {
+            tasks = tasks.filter((task) => task.status === status);
         }
-        else {
-            console.error(`Task with id: ${id} not found`);
+        if (search) {
+            tasks = tasks.filter((task) => task.title.includes(search) || task.description.includes(search));
         }
-        return this.tasks[index];
+        return tasks;
     }
 };
 TasksService = __decorate([
