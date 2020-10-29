@@ -5,15 +5,17 @@ import { CreateTaskDto } from './dto/create-task.dto';
 import { TaskRepository } from './task-repository';
 import { TaskStatus } from './task-status.enum';
 import { Task } from './task.entity';
+import { GetTasksFilterDto } from './dto/get-tasks-filter.dto';
 
 @Injectable()
 export class TasksService {
   constructor(
     @InjectRepository(TaskRepository) private taskRepository: TaskRepository
   ) {}
-  // getAllTasks(): Task[] {
-  //   return this.tasks;
-  // }
+
+  async getTasks(filterDto: GetTasksFilterDto): Promise<Task[]> {
+    return this.taskRepository.getTasks(filterDto);
+  }
 
   async createTask(createTaskDto: CreateTaskDto): Promise<Task> {
     return this.taskRepository.createTask(createTaskDto);
@@ -24,21 +26,6 @@ export class TasksService {
       throw new NotFoundException(`Task with id: ${id} not found`);
     }
   }
-
-  // getTasksWithFilters(filterDto: getTasksFilterDto): Task[] {
-  //   const { status, search } = filterDto;
-  //   let tasks = this.getAllTasks();
-  //   if (status) {
-  //     tasks = tasks.filter((task) => task.status === status);
-  //   }
-  //   if (search) {
-  //     tasks = tasks.filter(
-  //       (task) =>
-  //         task.title.includes(search) || task.description.includes(search)
-  //     );
-  //   }
-  //   return tasks;
-  // }
 
   async getTaskById(id: number) {
     const found = await this.taskRepository.findOne(id);
